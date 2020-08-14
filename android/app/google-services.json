@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "682536784122",
+    "firebase_url": "https://garudahacks-cc040.firebaseio.com",
+    "project_id": "garudahacks-cc040",
+    "storage_bucket": "garudahacks-cc040.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682536784122:android:f1eb41d2425a9773987943",
+        "android_client_info": {
+          "package_name": "com.example.garudahacks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682536784122-bhqo7b2sbma5eud789av2c3cibimkh01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTGOmGD1BMPAuJLOyLAWZ_yQwG4OJyvTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682536784122-bhqo7b2sbma5eud789av2c3cibimkh01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
