@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:double_back_to_close_app/double_back_to_close_app.dart';
 
@@ -7,9 +5,7 @@ import 'add.dart';
 import 'data.dart';
 import 'question.dart';
 
-
-//TODO: Put in Firebase secret key, use a guide 
-
+//TODO: Put in Firebase secr--et key, use a guide
 
 void main() {
   runApp(MyApp());
@@ -50,11 +46,7 @@ class _MyAppState extends State<MyApp> {
     ),
   ];
 
-  final List<Widget> _children = [
-    Data(),
-    Question(),
-    Add()
-  ];
+  final List<Widget> _children = [Data(), Question(), Add()];
 
   void onTabTapped(int index) {
     setState(() {
@@ -70,9 +62,10 @@ class _MyAppState extends State<MyApp> {
         child: Scaffold(
           appBar: AppBar(title: items[_currentIndex].title),
           body: DoubleBackToCloseApp(
-            child:_children[_currentIndex],
-            snackBar: SnackBar(content: Text('Tap Back Again To Exit App'),)
-          ),
+              child: _children[_currentIndex],
+              snackBar: SnackBar(
+                content: Text('Tap Back Again To Exit App'),
+              )),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             //TODO: change colour
