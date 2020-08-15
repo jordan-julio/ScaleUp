@@ -18,6 +18,8 @@ class _AddState extends State<Add> {
   final qContext = "Question";
   final c1 = "Choice1";
   final c2 = "Choice2";
+  final c1count = "choiceOneCount";
+  final c2count = "choiceTwoCount";
 
   @override
   void dispose() {
@@ -73,7 +75,9 @@ class _AddState extends State<Add> {
                   busName: businessName.text,
                   qContext: questions.text,
                   c1: choice1.text,
-                  c2: choice2.text
+                  c2: choice2.text,
+                  c1count:0,
+                  c2count:0 
                 });
                 businessName.clear();
                 questions.clear();

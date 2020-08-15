@@ -1,81 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:double_back_to_close_app/double_back_to_close_app.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-import 'add.dart';
-import 'data.dart';
-import 'question.dart';
-
-//TODO: Put in Firebase secr--et key, use a guide
+import 'home.dart';
+import 'login.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  int _currentIndex = 0;
-
-  final items = <BottomNavigationBarItem>[
-    BottomNavigationBarItem(
-      icon: new Icon(
-        Icons.account_circle,
-      ),
-      title: new Text(
-        'Profile',
-      ),
-    ),
-    BottomNavigationBarItem(
-      icon: new Icon(
-        Icons.question_answer,
-      ),
-      title: new Text(
-        'Question',
-      ),
-    ),
-    BottomNavigationBarItem(
-      icon: new Icon(
-        Icons.add_box,
-      ),
-      title: new Text(
-        'Add',
-      ),
-    ),
-  ];
-
-  final List<Widget> _children = [Data(), Question(), Add()];
-
-  void onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'This or That',
-      home: SafeArea(
-        child: Scaffold(
-          appBar: AppBar(title: items[_currentIndex].title),
-          body: DoubleBackToCloseApp(
-              child: _children[_currentIndex],
-              snackBar: SnackBar(
-                content: Text('Tap Back Again To Exit App'),
-              )),
-          bottomNavigationBar: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            //TODO: change colour
-            backgroundColor: Colors.teal[700],
-            onTap: onTabTapped,
-            currentIndex: _currentIndex,
-            items: items,
-          ),
-        ),
-      ),
-    );
+    // return FutureBuilder<FirebaseUser>(
+    //     future: FirebaseAuth.instance.currentUser(),
+    //     builder: (BuildContext context, AsyncSnapshot<FirebaseUser> snapshot) {
+    //       if (snapshot.hasData) {
+    //         FirebaseUser user = snapshot.data; // this is your user instance
+    //         /// is because there is user already logged
+            return Home();
+    //       }
+          /// other way there is no user logged.
+          // return Login();
+        // });
   }
 }
