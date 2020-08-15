@@ -16,10 +16,10 @@ class _HomeState extends State<Home> {
   final items = <BottomNavigationBarItem>[
     BottomNavigationBarItem(
       icon: new Icon(
-        Icons.account_circle,
+        Icons.assessment,
       ),
       title: new Text(
-        'Profile',
+        'Data',
       ),
     ),
     BottomNavigationBarItem(
