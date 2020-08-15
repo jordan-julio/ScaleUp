@@ -33,6 +33,8 @@ class _QuestionState extends State<Question> {
             StreamBuilder(
                 stream: firestoreInstance.collection("Questions").snapshots(),
                 builder: (context, snapshots) {
+                  if (snapshots.data == null)
+                    return CircularProgressIndicator();
                   DocumentSnapshot documentSnapshot;
 
                   void getQuestions() {
