@@ -1,4 +1,4 @@
-# garudahacks
+# ScaleUp
 
 A new Flutter project.
 
