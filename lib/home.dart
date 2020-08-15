@@ -15,28 +15,16 @@ class _HomeState extends State<Home> {
 
   final items = <BottomNavigationBarItem>[
     BottomNavigationBarItem(
-      icon: new Icon(
-        Icons.assessment,
-      ),
-      title: new Text(
-        'Data',
-      ),
+      icon: new Icon(Icons.assessment, color: Colors.white),
+      title: new Text('Data', style: TextStyle(color: Colors.white)),
     ),
     BottomNavigationBarItem(
-      icon: new Icon(
-        Icons.question_answer,
-      ),
-      title: new Text(
-        'Question',
-      ),
+      icon: new Icon(Icons.question_answer, color: Colors.white),
+      title: new Text('Question', style: TextStyle(color: Colors.white)),
     ),
     BottomNavigationBarItem(
-      icon: new Icon(
-        Icons.add_box,
-      ),
-      title: new Text(
-        'Add',
-      ),
+      icon: new Icon(Icons.add_box, color: Colors.white),
+      title: new Text('Add', style: TextStyle(color: Colors.white)),
     ),
   ];
 
@@ -54,7 +42,9 @@ class _HomeState extends State<Home> {
       title: 'This or That',
       home: SafeArea(
         child: Scaffold(
+          backgroundColor: Colors.grey[400],
           appBar: AppBar(
+            backgroundColor: Colors.black,
             title: items[_currentIndex].title,
           ),
           body: DoubleBackToCloseApp(
@@ -66,7 +56,7 @@ class _HomeState extends State<Home> {
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             //TODO: change colour
-            backgroundColor: Colors.teal[700],
+            backgroundColor: Colors.grey[850],
             onTap: onTabTapped,
             currentIndex: _currentIndex,
             items: items,
