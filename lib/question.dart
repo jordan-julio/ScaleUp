@@ -20,7 +20,7 @@ class _QuestionState extends State<Question> {
   int choiceOneCount;
   int choiceTwoCount;
   @override
-  void init(){
+  void init() {
     super.initState();
   }
 
@@ -34,11 +34,9 @@ class _QuestionState extends State<Question> {
                 stream: firestoreInstance.collection("Questions").snapshots(),
                 builder: (context, snapshots) {
                   DocumentSnapshot documentSnapshot;
-                  
-                  
 
                   void getQuestions() {
-                    if (!questionsObtained){
+                    if (!questionsObtained) {
                       randomValue =
                           new Random().nextInt(snapshots.data.documents.length);
                       print(randomValue);
@@ -51,8 +49,9 @@ class _QuestionState extends State<Question> {
                       choiceOneCount = documentSnapshot["choiceOneCount"];
                       choiceTwoCount = documentSnapshot["choiceTwoCount"];
                       questionsObtained = true;
-                      }
-                  };
+                    }
+                  }
+
                   getQuestions();
 
                   void addCounter(int choice) {
@@ -67,7 +66,7 @@ class _QuestionState extends State<Question> {
                           .updateData({"choiceTwoCount": choiceTwoCount + 1});
                     }
                   }
-                  
+
                   return Center(
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
@@ -115,6 +114,7 @@ class _QuestionState extends State<Question> {
                                   ),
                                   Container(
                                     height: 200,
+                                    width: 1,
                                   )
                                 ],
                               )
