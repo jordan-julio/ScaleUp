@@ -19,10 +19,6 @@ class _QuestionState extends State<Question> {
   int randomValue;
   int choiceOneCount;
   int choiceTwoCount;
-  @override
-  void init() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {

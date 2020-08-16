@@ -55,7 +55,6 @@ class _HomeState extends State<Home> {
           ),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
-            //TODO: change colour
             backgroundColor: Colors.grey[850],
             onTap: onTabTapped,
             currentIndex: _currentIndex,
